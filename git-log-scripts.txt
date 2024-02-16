@@ -1,0 +1,17 @@
+Log de um commit específico:
+git log -1 -p -U0 --shortstat commit_id
+
+----------------------------------------
+
+Log de commits em uma margem de x dias:
+git log --shortstat --since "yyy-mm-dd" --until "yyy-mm-dd" --pretty=format:"%h %an %ad"
+
+----------------------------------------
+
+Git blame para um arquivo específico:
+git blame commit_id^ -- file_name | grep -e " line_number)"
+
+----------------------------------------
+
+Log de todas modificações em arquivos
+git log --shortstat file_name
